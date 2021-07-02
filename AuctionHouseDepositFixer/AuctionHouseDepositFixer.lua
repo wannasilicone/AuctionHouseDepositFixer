@@ -1,7 +1,7 @@
 local ChromieCraftDiscount, defaultDeposit, modifiedDeposit, roundedDeposit, finalDeposit
 
 hooksecurefunc("UpdateDeposit", function()
-	ChromieCraftDiscount = 1 -- percentage of normal rates
+	ChromieCraftDiscount = 10 -- percentage of normal rates
 	defaultDeposit = CalculateAuctionDeposit(AuctionFrameAuctions.duration, AuctionsStackSizeEntry:GetNumber() * AuctionsNumStacksEntry:GetNumber())
 	modifiedDeposit = defaultDeposit * (ChromieCraftDiscount / 100)
 	if modifiedDeposit == 0 then
