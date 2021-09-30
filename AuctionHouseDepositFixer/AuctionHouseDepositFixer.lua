@@ -1,7 +1,7 @@
 local ServerSideDiscount, defaultDeposit, modifiedDeposit, roundedDeposit, finalDeposit
 
 local function GetModifiedDeposit()
-	ServerSideDiscount = 10 -- percentage of normal rates
+	local ChromieCraftDiscount = 10 -- percentage of normal rates
 	defaultDeposit = CalculateAuctionDeposit(AuctionFrameAuctions.duration, AuctionsStackSizeEntry:GetNumber() * AuctionsNumStacksEntry:GetNumber())
 	modifiedDeposit = defaultDeposit * (ServerSideDiscount / 100)
 	if modifiedDeposit == 0 then
